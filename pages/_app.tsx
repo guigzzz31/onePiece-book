@@ -1,8 +1,17 @@
-// import App from "next/app";
-import type { AppProps /*, AppContext */ } from 'next/app'
+import {
+  AppProps, /*, AppContext */
+} from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import '../styles/index.css'
+
+import Container from './../components/Container';
+
+function MyApp({ }: AppProps) {
+  return (
+    <div className="">
+      <Container />
+    </div>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -14,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 //   // calls page's `getInitialProps` and fills `appProps.pageProps`
 //   const appProps = await App.getInitialProps(appContext);
 
-//   return { ...appProps }
+//   return {...appProps}
 // }
 
 export default MyApp
